@@ -1,4 +1,4 @@
-# MkDocs Installation Guide (Windows)
+# MkDocs Local Machine Installation Guide (Windows)
 
 This guide walks you through setting up **MkDocs** with the **Material Theme** on a local Windows machine.
 
