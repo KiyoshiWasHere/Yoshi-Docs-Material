@@ -2,3 +2,9 @@ site_name: Yoshi Docs
 
 theme:
   name: material
+
+nav:
+  - Home: index.md
+
+  # GitHub Pages configuration
+site_url: https://KiyoshiWasHere.github.io/Yoshi-Docs-Material
