@@ -2,7 +2,10 @@ site_name: Yoshi Docs
 
 theme:
   name: material
-
+  palette:
+    scheme: slate  # This sets the default to dark mode
+    primary: indigo
+    accent: indigo
 nav:
   - Home: index.md
 
