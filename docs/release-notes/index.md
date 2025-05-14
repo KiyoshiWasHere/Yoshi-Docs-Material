@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Release Notes
 
 Welcome to the Release Notes archive. Select a date to view the detailed release updates.

@@ -9,6 +9,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.path
 nav:
   - Home: index.md
   - Usage Guide: usage-guide.md
