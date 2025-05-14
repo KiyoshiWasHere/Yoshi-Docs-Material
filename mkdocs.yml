@@ -12,6 +12,7 @@ theme:
 nav:
   - Home: index.md
   - "Release Notes": release-notes/index.md
+  - Usage Guide: usage-guide.md
 
   # GitHub Pages configuration
 site_url: https://KiyoshiWasHere.github.io/Yoshi-Docs-Material
