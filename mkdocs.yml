@@ -11,7 +11,7 @@ theme:
     - navigation.tabs.sticky
 nav:
   - Home: index.md
-  - Release Notes: release-notes/index.md
+  - "Release Notes": release-notes/index.md
 
   # GitHub Pages configuration
 site_url: https://KiyoshiWasHere.github.io/Yoshi-Docs-Material
