@@ -8,6 +8,8 @@ theme:
     accent: indigo
 nav:
   - Home: index.md
-
+features:
+    - navigation.tabs
+    - navigation.tabs.sticky
   # GitHub Pages configuration
 site_url: https://KiyoshiWasHere.github.io/Yoshi-Docs-Material
