@@ -6,11 +6,12 @@ theme:
     scheme: slate  # This sets the default to dark mode
     primary: indigo
     accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
 nav:
   - Home: index.md
   - Release Notes: index.md
-features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+
   # GitHub Pages configuration
 site_url: https://KiyoshiWasHere.github.io/Yoshi-Docs-Material
