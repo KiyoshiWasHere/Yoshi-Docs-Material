@@ -15,7 +15,7 @@ nav:
   - Home: index.md
   - Usage Guide: usage-guide.md
   - "Release Notes": release-notes/index.md
-
+  - "Developer Documentation Sample" : developer-documentation-sample.md
 
   # GitHub Pages configuration
 site_url: https://KiyoshiWasHere.github.io/Yoshi-Docs-Material
