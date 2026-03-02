@@ -1,75 +1,85 @@
 # Designing AI-Ready Developer Documentation
 
-## A Deep Dive Guide to Structured, Searchable, and Composable Docs
+A deep dive guide to building structured, searchable, and composable
+documentation systems.
 
-### Audience
+## Overview
 
-Developer Experience teams, technical writers, platform engineers, and
-documentation architects building modern documentation systems that
-support:
+Modern documentation must serve multiple consumers simultaneously:
 
--   Static site generators such as Docusaurus or MkDocs\
--   AI retrieval systems such as RAG, embeddings, and semantic search\
--   Embedded in-product help\
--   Multi-audience documentation for developer, business, and internal
-    users
+-   Developers reading in a browser
+-   In-product help systems embedding contextual guidance
+-   AI systems retrieving structured answers from documentation corpora
 
-# 1. Why AI-Ready Documentation Matters
-
-Traditional documentation is written for humans who browse or search
-pages manually.
-
-Modern documentation must serve three parallel consumers:
-
-1.  Developers reading in a browser\
-2.  In-product help systems embedding documentation contextually\
-3.  AI agents retrieving structured answers from the documentation
-    corpus
-
-If documentation is not structured intentionally, AI systems produce
-inconsistent answers, partial retrieval, and hallucinations.
+If documentation is not intentionally structured, retrieval systems
+produce incomplete answers, hallucinations, and inconsistent responses.
 
 AI-ready documentation is about designing documentation systems that
 are:
 
--   Structurally predictable\
--   Context-rich\
--   Chunkable\
--   Version-aware\
+-   Structurally predictable
+-   Context-rich
+-   Chunkable
+-   Version-aware
 -   Audience-aware
 
-# 2. Developer Experience Principles
+## Intended Audience
 
-## Task Completion Speed
+This guide is designed for:
 
-Developers want:
+-   Developer Experience teams
+-   Technical writers
+-   Platform engineers
+-   Documentation architects
 
--   Clear prerequisites\
--   Runnable examples\
--   Minimal context switching\
+It assumes familiarity with static site generators such as Docusaurus or
+MkDocs.
+
+## Developer Experience Principles
+
+### Task Completion Speed
+
+Documentation should optimize for implementation velocity. Developers
+need:
+
+-   Clear prerequisites
+-   Runnable examples
+-   Minimal context switching
 -   Fast scanning
 
-## Predictability
+Every guide should enable a developer to move from reading to working
+code efficiently.
 
-Every page should answer:
+### Predictable Structure
 
--   What is this?\
--   When should I use it?\
--   How do I implement it?\
--   What are the edge cases?\
+Every documentation page should answer the following questions:
+
+-   What is this?
+-   When should I use it?
+-   How do I implement it?
+-   What are the edge cases?
 -   What breaks if I misuse it?
 
-## Progressive Disclosure
+Predictability reduces cognitive load and improves search effectiveness.
 
-Separate:
+### Progressive Disclosure
 
--   Overview\
--   Concept\
--   Implementation\
--   Reference\
+Separate content types clearly:
+
+-   Overview
+-   Concept
+-   Implementation
+-   Reference
 -   Troubleshooting
 
-# 3. Structural Architecture
+Avoid mixing conceptual explanation and API reference without clear
+structural boundaries.
+
+## Documentation Architecture
+
+A scalable documentation system should follow a predictable taxonomy.
+
+### Recommended Structure
 
     Documentation
     │
@@ -80,11 +90,21 @@ Separate:
     ├── Release Notes
     └── Troubleshooting
 
-Clear taxonomy improves discoverability and AI retrieval precision.
+Clear taxonomy improves:
 
-# 4. Writing for Retrieval Systems
+-   Navigation consistency
+-   Search precision
+-   AI chunk alignment
+-   Version traceability
 
-## Use Consistent Headings
+## Writing for Retrieval Systems
+
+AI systems typically retrieve content in segmented chunks. Poor
+structure reduces retrieval precision.
+
+### Use Consistent Section Headings
+
+Every feature guide should follow a consistent pattern:
 
     # Feature Name
     ## Overview
@@ -94,46 +114,59 @@ Clear taxonomy improves discoverability and AI retrieval precision.
     ## Error Handling
     ## Limitations
 
-Headings serve as semantic anchors for both humans and AI systems.
+Headings serve as semantic anchors for both human readers and AI
+systems.
 
-## Avoid Ambiguity
+### Avoid Ambiguous Language
 
-Always specify:
+Ambiguity reduces retrieval quality.
 
--   Parameter name\
--   Scope\
--   Default value\
--   Units
+Instead of:
 
-Example:
+> This setting controls the timeout.
+
+Write:
 
 > The `requestTimeout` parameter controls how long the API waits before
 > terminating an outbound HTTP request. Default: 30 seconds.
 
-# 5. Versioning Strategy
+Always specify:
 
-Maintain immutable version paths:
+-   Parameter name
+-   Scope
+-   Default value
+-   Units
+
+## Versioning Strategy
+
+Documentation must reflect API and SDK version stability.
+
+### Use Immutable Version Paths
 
     /docs/v1/
     /docs/v2/
     /docs/latest/
 
-Never overwrite documentation for a live API version.
+Best practices:
 
-# 6. Example: Webhook Retry Policy
+-   Never overwrite documentation for a live API version
+-   Freeze documentation at release
+-   Maintain backward-compatible access
 
-## Overview
+## Deep Dive Example: Webhook Retry Policy
+
+### Overview
 
 The webhook retry policy determines how failed webhook events are
 re-delivered.
 
 Retries occur when:
 
--   The endpoint returns HTTP 5xx\
--   The endpoint times out\
+-   The endpoint returns HTTP 5xx
+-   The endpoint times out
 -   DNS resolution fails
 
-## Configuration Example
+### Configuration
 
 ``` http
 PATCH /v2/webhooks/{id}
@@ -148,16 +181,22 @@ PATCH /v2/webhooks/{id}
 }
 ```
 
-## Best Practices
+### Best Practices
 
--   Return HTTP 2xx quickly\
--   Process events asynchronously\
+-   Return HTTP 2xx quickly
+-   Process events asynchronously
 -   Log webhook IDs for traceability
 
-# Conclusion
+## Conclusion
 
-Developer experience is a system design problem.
+Developer experience is a systems design problem.
 
-When documentation is structured intentionally, versioned carefully, and
-written for both humans and AI systems, it reduces support burden,
-accelerates integrations, and scales effectively.
+Well-structured documentation:
+
+-   Reduces support burden
+-   Accelerates integrations
+-   Improves search relevance
+-   Enables reliable AI assistance
+
+Documentation is not static content. It is a product surface that must
+be intentionally designed.
