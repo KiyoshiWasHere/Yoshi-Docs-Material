@@ -15,7 +15,7 @@ nav:
   - Home: index.md
   - Usage Guide: usage-guide.md
   - "Release Notes": release-notes/index.md
-  - "Developer Documentation Sample": docs/developer-documentaion-sample.md
+  - "Developer Documentation Sample": devsample.md
 
 
   # GitHub Pages configuration
